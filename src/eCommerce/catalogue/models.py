@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Item(models.Model):
     name = models.CharField(max_length=250)
     price = models.IntegerField()
-    image_location = models.CharField(max_length=250)
+    image_location = models.CharField(max_length=250, blank=True, default="")
     discount_price = models.IntegerField(blank=True, null=True)
     slug = models.SlugField()
 
