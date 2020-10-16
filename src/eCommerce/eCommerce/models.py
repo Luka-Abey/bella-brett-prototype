@@ -15,3 +15,6 @@ class Order(models.Model):
     ordered = models.BooleanField(auto_now_add=False)
     start_date = models.DateTimeField(auto_now_add=True)
     ordered_date = models.DateTimeField()
+
+    def __str__(self)::
+        return self.user.username
