@@ -3,7 +3,12 @@ from django.contrib.auth.models import User
 
 
 class Item(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=250)
+    price = models.IntegerField()
+    discount_price = models.IntegerField()
+
+    def __str__(self):
+        return self.name
 
 
 class OrderItem(models.Model):
