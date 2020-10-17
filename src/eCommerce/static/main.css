@@ -67,8 +67,8 @@ footer{
   .nav-links{
     position: fixed;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 93vh;
+    top: 7vh;
     background-color: #523143;
     display: flex;
     flex-direction: column;
