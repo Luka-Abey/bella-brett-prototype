@@ -5,16 +5,18 @@
 }
 
 nav{
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #5D4954;
+  background-color: #523143;
   font-family: 'Poppins', sans-serif;
 }
 
 footer{
-  background-color: #5D4954;
+  background-color: #523143;
 }
 
 .logo{
@@ -67,7 +69,7 @@ footer{
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #5D4954;
+    background-color: #523143;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,16 +115,6 @@ footer{
 .banner {
   width: 100%;
   height: auto;
+  padding: 8vh 0;
 }
 
-/* #banner {
-  background-color: #666666;
-  background-image: url("/media/gfwfreya.jpg");
-  background-size: full;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #d8d8d8;
-  padding: 14em 0;
-  text-align: center;
-  position: relative;
-} */
