@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 
 <html>
     <head>
@@ -14,10 +14,10 @@
         <sup>Superscript</sup>
         <hr/>
 
-<!--        <figure>-->
-<!--          <img src="p.png" alt="Image description"/>-->
-<!--          <figcaption>Image caption</figcaption>-->
-<!--        </figure>-->
+        <figure>
+          <img src="{% static '/media/pattern1.png' %}" alt="Image description"/>
+          <figcaption>Image caption</figcaption>
+        </figure>
 
     </body>
 
