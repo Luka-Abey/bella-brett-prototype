@@ -13,6 +13,10 @@ nav{
   font-family: 'Poppins', sans-serif;
 }
 
+footer{
+  background-color: #5D4954;
+}
+
 .logo{
   color: #ffffeb;
   letter-spacing: 5px;
@@ -105,3 +109,20 @@ nav{
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+/* #banner {
+  background-color: #666666;
+  background-image: url("/media/gfwfreya.jpg");
+  background-size: full;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #d8d8d8;
+  padding: 14em 0;
+  text-align: center;
+  position: relative;
+} */
