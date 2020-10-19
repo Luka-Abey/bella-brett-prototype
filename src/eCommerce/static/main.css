@@ -15,6 +15,7 @@ nav{
   min-height: 8vh;
   background-color: #523143;
   font-family: 'Poppins', sans-serif;
+  z-index: 1;
 }
 
 footer{
@@ -117,19 +118,22 @@ footer{
 .banner {
   width: 100%;
   height: auto;
-  padding: 8vh 0;
+  padding: 0 0;
   position: relative;
   text-align: center;
 }
 
 .page {
-  padding: 6em 0 4em 0;
+  padding: 8vh 0 4em 0;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .products {
-  max-width: 10%;
-  max-height: 2vh;
+  max-width: 40%;
+  height: auto;
 }
 
 .taster {
