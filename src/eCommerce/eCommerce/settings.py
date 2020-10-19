@@ -110,4 +110,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     '/src/eCommerce/static/',
 ]
+
 STATIC_URL = '/static/'
