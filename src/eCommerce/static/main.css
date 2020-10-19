@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  align-items: center;
 }
 
 nav{
@@ -121,7 +122,15 @@ footer{
   text-align: center;
 }
 
+.page {
+  padding: 6em 0 4em 0;
+  align-items: center;
+}
 
+.products {
+  max-width: 10%;
+  max-height: 2vh;
+}
 
 .taster {
   width: 30%;
