@@ -137,6 +137,34 @@ footer{
   height: auto;
 }
 
+.product-box {
+  border: 1px solid  #52314346;
+  margin: 10px 10px;
+  padding: 0 0;
+  transition: opacity 1s;
+}
+
+.product-box:hover {
+  opacity: 0.5;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (min-width: 1026px) {
+  .row {
+    margin-bottom: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
 .taster {
   width: 30%;
   height: auto;

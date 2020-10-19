@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
         <link rel= "stylesheet" type = "text/css" href="{% static 'main.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <title>Bella Brett</title>
@@ -20,7 +20,7 @@
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#products">Products</a>
+                    <a href="#navProducts">Products</a>
                 </li>
                 <li>
                     <a href="#">Editorial</a>
@@ -50,25 +50,22 @@
         </div>
 
         <div>
-            <section class = "products">
+            <section class = "navProducts">
                           <!-- add cards and make a certain size -->
                     <!-- <img src="{% static '/media/trouserOne.jpg' %}" 
                     alt="patterned trousers" class = "products" /> -->
-                <div class = "container-fluid px-0"> 
                     <!-- container always fills up whole width of the screen -->
-                    <div class = "row align-items-center mx-5">
-                        <div class = "col-md-4 card">
+                    <div class = "row page">
+                        <div class = "col-md-3 product-box">
                             <img src="{% static '/media/trouserOne.jpg' %}" class = "products">
                         </div>
-                        <div class = "col-md-4 card">
+                        <div class = "col-md-3 product-box">
                             <img src="{% static '/media/trouserOne.jpg' %}" class = "products">
                         </div>
-                        <div class = "col-md-4 card">
+                        <div class = "col-md-3 product-box">
                             <img src="{% static '/media/trouserOne.jpg' %}" class = "products">
                         </div>
                     </div>
-                </div>
-           
            
              </section>
         </div>
