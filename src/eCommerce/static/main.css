@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
   align-items: center;
 }
 
@@ -132,7 +133,7 @@ footer{
 }
 
 .products {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
 }
 
