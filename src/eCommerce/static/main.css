@@ -29,6 +29,13 @@ footer{
   font-size: 20px;
 }
 
+.logo a{
+  text-decoration: none;
+  color: #ffffeb;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
 .basket {
   height: 25;
   width: auto;
