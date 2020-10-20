@@ -190,3 +190,38 @@ footer{
   height: auto;
   padding: 0 2vh;
 }
+
+.basket {
+  padding: 10vh 8vh;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: #ffffeb;
+  background: #523143;
+  font-family: Poppins;
+  font-weight: 100;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td img {
+  height: 50px;
+  width: auto;
+}

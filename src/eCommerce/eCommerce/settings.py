@@ -111,4 +111,8 @@ STATICFILES_DIRS = [
     '/src/eCommerce/static/',
 ]
 
+MEDIA_URL = '/media/trousers/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'trousers')
+
 STATIC_URL = '/static/'

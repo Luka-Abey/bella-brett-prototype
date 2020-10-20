@@ -3,11 +3,10 @@ from django.contrib.auth.models import User
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_location = models.CharField(max_length=250, blank=True, default="")
-    discount_price = models.IntegerField(blank=True, null=True)
-    slug = models.SlugField()
+    image = models.ImageField(null=True, blank=True, upload_to="./static/media/trousers/")
+    description = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
