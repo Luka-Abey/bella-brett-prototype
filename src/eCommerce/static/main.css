@@ -94,6 +94,10 @@ footer{
   }
 }
 
+.individual-link {
+  transition: opacity 0.5s;
+}
+
 .individual-link:hover {
   opacity: 0.5;
 }
