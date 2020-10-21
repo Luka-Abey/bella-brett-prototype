@@ -12,7 +12,7 @@ nav{
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center !important;
   min-height: 8vh;
   background-color: #523143;
   font-family: 'Poppins', sans-serif;
