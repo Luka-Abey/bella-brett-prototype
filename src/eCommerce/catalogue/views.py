@@ -13,3 +13,6 @@ def basket(request):
 
 def checkout(request):
     return render(request, 'checkout.html')
+
+
+
