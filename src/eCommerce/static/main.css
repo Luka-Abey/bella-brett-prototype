@@ -19,6 +19,10 @@ nav{
   z-index: 1;
 }
 
+footer {
+  min-height: 8vh;
+}
+
 h5 {
   opacity: 0.5;
   font-size: 20;

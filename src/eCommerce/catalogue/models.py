@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# SIZE_CHOICES = (
+#     ('S', 'Small'),
+#     ('M', 'Medium'),
+#     ('L', 'Large')
+# )
 
 class Item(models.Model):
     name = models.CharField(max_length=255)
