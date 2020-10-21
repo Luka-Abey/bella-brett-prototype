@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
+from .models import Item
 
 def home(request):
-    return render(request, 'index.html')
+    items = Item.objects.all()
+
+    return render(request, 'index.html', {'items': items})
 
 
 def basket(request):
