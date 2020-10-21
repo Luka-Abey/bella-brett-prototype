@@ -7,6 +7,7 @@ class Item(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True, upload_to="images/")
     description = models.CharField(max_length=255)
+    stock = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -26,6 +27,7 @@ class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     items = models.ManyToManyField(OrderItem)
     name = models.CharField(max_length=255)
+    email = models.EmailField()
     delivery_address = models.CharField(max_length=255)
     ordered = models.BooleanField(default=False)
     date = models.DateTimeField()
