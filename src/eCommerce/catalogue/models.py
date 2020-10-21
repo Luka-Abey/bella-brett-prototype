@@ -28,8 +28,7 @@ class Order(models.Model):
     name = models.CharField(max_length=255)
     delivery_address = models.CharField(max_length=255)
     ordered = models.BooleanField(default=False)
-    start_date = models.DateTimeField(auto_now_add=True)
     date = models.DateTimeField()
 
     def __str__(self):
-        return self.user.username
+        return self.name
