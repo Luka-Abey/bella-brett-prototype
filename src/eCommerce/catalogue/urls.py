@@ -6,6 +6,7 @@ from .views import (
     add_to_cart
 )
 
+app_name = "catalogue"
 
 urlpatterns = [
     path('', HomeView.as_view(), name='index'),

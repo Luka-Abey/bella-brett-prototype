@@ -28,7 +28,6 @@ def add_to_cart(request, id):
         if order.items.filter(item__id=item.id).exists():
             order_item.quantity +=1 ;
             order_item.save()
-    
     else:
         order = Order.objects.create(user=request.user)
         order.items.add(order_item)
