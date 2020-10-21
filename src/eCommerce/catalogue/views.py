@@ -31,5 +31,8 @@ def add_to_cart(request, id):
     else:
         order = Order.objects.create(user=request.user)
         order.items.add(order_item)
+
+
+        
     
 
