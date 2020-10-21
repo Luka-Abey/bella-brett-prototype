@@ -168,7 +168,7 @@ footer{
 }
 
 .products:hover {
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .product-box {
@@ -300,3 +300,4 @@ button:hover::after {
   border-left-color: #523143;
   transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
 }
+
