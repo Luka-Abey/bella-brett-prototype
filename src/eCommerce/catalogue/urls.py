@@ -1,9 +1,13 @@
 from django.urls import path
-from .views import home, basket, checkout
+from .views import (
+    HomeView,
+    basket, 
+    checkout
+)
 
 
 urlpatterns = [
-    path('', home, name='index'),
+    path('', HomeView.as_view(), name='index'),
     path('basket/', basket, name="basket"),
     path('checkout/', checkout, name="checkout"),
 ]

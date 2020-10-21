@@ -1,11 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Item
+from .models import Item, Order, OrderItem
 
-def home(request):
-    items = Item.objects.all()
 
-    return render(request, 'index.html', {'items': items})
 
 
 def basket(request):
@@ -20,4 +17,9 @@ def checkout(request):
 class HomeView(ListView):
     model = Item
     template_name = "index.html"
+
+
+def add_to_cart(request, id):
+    item = get_object_or_404(Item, id=id)
+    order_item = OrderItem.objects
 
