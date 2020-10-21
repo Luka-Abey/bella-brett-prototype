@@ -13,6 +13,9 @@ class Item(models.Model):
     image = models.ImageField(null=True, blank=True, upload_to="images/")
     description = models.CharField(max_length=255)
     stock = models.IntegerField()
+    timestamp = models.DateTimeField(auto_add_now=True)
+    featured = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
