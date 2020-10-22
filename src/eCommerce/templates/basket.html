@@ -63,7 +63,7 @@
                             <img src="{{product.item.image.url}}">
                             <div>
                                 <p>{{product.item.name}}</p>
-                                <small>{{product.item.price}}</small>
+                                <small>£{{product.item.price}}</small>
                                 <a href="">Remove</a>
                             </div>
                     
@@ -80,10 +80,10 @@
                         <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
                     </td>
                     <td>
-                        Item count: {{order.get_cart_item_quantity}}, Total:
+                        Item count: {{order.get_cart_item_quantity}}. Total:
                     </td>
                     <td>
-                        <a>{{order.get_cart_total}}</a>
+                        <a>£{{order.get_cart_total}}</a>
                     </td>
                 </tr>
             </table>
