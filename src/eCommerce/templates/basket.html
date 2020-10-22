@@ -56,23 +56,32 @@
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
-                {% for item in object_list %}
+                {% for product in items %}
                 <tr>
-                    <td><div class="cart-info">
-                        <img src="{{item.image.url}}">
-                        <div>
-                            <p>{{item.name}}</p>
-                            <small>{{item.price}}</small>
-                            <a href="">Remove</a>
-                        </div>
+                    <td>
+                        <div class="cart-info">
+                            <img src="{{product.item.image.url}}">
+                            <div>
+                                <p>{{product.item.name}}</p>
+                                <small>{{product.item.price}}</small>
+                                <a href="">Remove</a>
+                            </div>
                     
-                    </div></td>
-                    <td><input type="number" value "1"></td>
-                    <td>£14</td>
+                        </div>
+                    </td>
+                    <td>
+                       {{product.quantity}}
+                    </td>
+                    <td>{{product.get_total}}</td>
                 </tr>
                 {% endfor %}
                 <tr>
-                    <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
+                    <td>
+                        <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
+                    </td>
+                    <td>
+                        individual totals here
+                    </td>
                 </tr>
             </table>
 

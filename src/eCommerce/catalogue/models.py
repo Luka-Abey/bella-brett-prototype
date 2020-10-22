@@ -52,6 +52,11 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank=True, null=True)
     quantity = models.IntegerField(default=1)
 
+    @property
+    def get_total(self):
+        total = self.item.price * self.quantity
+        return total
+
     def __str__(self):
         return f"{self.quantity} of {self.item.name}"
 

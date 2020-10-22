@@ -6,20 +6,16 @@ def checkout(request):
     return render(request, 'checkout.html')
 
 
-class BasketView(ListView):
-    model = Item
-    template_name = "basket.html"
+def basket(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, ordered=False) 
+        items = order.orderitem_set.all()
+    else:
+        items = []
 
-    def check_sign_in(self):
-        if self.request.user.is_authenticated:
-            customer = self.request.user.customer
-            order, created = Order.objects.get_or_create(customer=customer, complete=False) 
-            items = order.orderitem_set.all()
-        else:
-            items = []
-
-        context = {'items': items}   
-        return tender(request, template_name, context)
+    context = {'items': items}   
+    return render(request, 'basket.html', context)
    
 
 
