@@ -80,7 +80,10 @@
                         <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
                     </td>
                     <td>
-                        individual totals here
+                        Item count: {{order.get_cart_item_quantity}}, Total:
+                    </td>
+                    <td>
+                        <a>{{order.get_cart_total}}</a>
                     </td>
                 </tr>
             </table>
