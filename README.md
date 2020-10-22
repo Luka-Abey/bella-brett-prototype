@@ -15,6 +15,7 @@ This is a repo to document a clothing brand site I am developing.
 - [x] Image upload as part of item, from Django admin
 - [x] Dynamically rendered HTML home/products page
 - [x] Dynamically rendered HTML basket
+- [x] User functionality integrated
 
 #### To Do:
 - [] Add to cart
