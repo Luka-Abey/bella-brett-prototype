@@ -1,4 +1,5 @@
 {% load static %}
+
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
@@ -8,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <title>Bella Brett: Your Basket</title>
     </head>
+
+    {% block content %}
 
     <body>
         <nav>
@@ -36,6 +39,16 @@
             </div>
         </nav>
 
+        <br>
+        <br>
+        <br>
+        
+        <div>
+            <section id="about" class = "page">            
+                    <h1>Bella Brett</h1>
+                    <h2>YOUR BASKET !</h2>
+            </section>
+        </div>
         <div class="small-container basket">
             <table>
                 <tr>
@@ -43,12 +56,13 @@
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
+                {% for item in object_list %}
                 <tr>
                     <td><div class="cart-info">
-                        <img src="{% static 'media/trouserOne.jpg' %}">
+                        <img src="{{item.image.url}}">
                         <div>
-                            <p>Trouser design one</p>
-                            <small>£25</small>
+                            <p>{{item.name}}</p>
+                            <small>{{item.price}}</small>
                             <a href="">Remove</a>
                         </div>
                     
@@ -56,17 +70,18 @@
                     <td><input type="number" value "1"></td>
                     <td>£14</td>
                 </tr>
+                {% endfor %}
+                <tr>
+                    <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
+                </tr>
             </table>
 
         </div>
-        <div>
-            <section id="about" class = "page">            
-                    <h1>Bella Brett</h1>
-                    <h2>YOUR BASKET !</h2>
-            </section>
-        </div>
 
-        <footer class = >
+
+        {% endblock content %}
+
+        <footer class = "footer" >
             Thanks for visiting
         </footer>
     </body>

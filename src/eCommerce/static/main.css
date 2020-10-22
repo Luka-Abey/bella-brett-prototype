@@ -19,8 +19,17 @@ nav{
   z-index: 1;
 }
 
-footer {
+.index-footer {
   min-height: 8vh;
+  background-color: #523143;
+}
+
+.footer {
+  min-height: 8vh;
+  background-color: #523143;
+  position:absolute;
+  bottom: 0;
+  width:100%;
 }
 
 h5 {
@@ -28,9 +37,6 @@ h5 {
   font-size: 20;
 }
 
-footer{
-  background-color: #523143;
-}
 
 .logo{
   color: #ffffeb;
@@ -48,6 +54,8 @@ footer{
 .basket {
   height: 25;
   width: auto;
+  padding: 0 8vh;
+  
 }
 
 .nav-links{
@@ -205,10 +213,6 @@ footer{
   padding: 0 2vh;
 }
 
-.basket {
-  padding: 10vh 8vh;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -300,4 +304,3 @@ button:hover::after {
   border-left-color: #523143;
   transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
 }
-
