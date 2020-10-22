@@ -8,6 +8,16 @@ from django.contrib.auth.models import User
 #     ('L', 'Large')
 # )
 
+class Customer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField()
+
+    def __str__(self)
+        return self.name
+
+
+
 class Item(models.Model):
     name = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -36,7 +46,7 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, blank=True, null=True)
     items = models.ManyToManyField(OrderItem)
     name = models.CharField(max_length=255)
     email = models.EmailField()
