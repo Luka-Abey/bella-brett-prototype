@@ -10,6 +10,18 @@ class BasketView(ListView):
     model = Item
     template_name = "basket.html"
 
+    def check_sign_in(self):
+        if self.request.user.is_authenticated:
+            customer = self.request.user.customer
+            order, created = Order.objects.get_or_create(customer=customer, complete=False) 
+            items = order.orderitem_set.all()
+        else:
+            items = []
+
+        context = {'items': items}   
+        return tender(request, template_name, context)
+   
+
 
 class HomeView(ListView):
     model = Item

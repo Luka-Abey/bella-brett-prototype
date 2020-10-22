@@ -13,7 +13,7 @@ class Customer(models.Model):
     name = models.CharField(max_length=200, null=True)
     email = models.EmailField()
 
-    def __str__(self)
+    def __str__(self):
         return self.name
 
 
@@ -35,24 +35,34 @@ class Item(models.Model):
         })
 
 
-class OrderItem(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+class Order(models.Model):
+    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, blank=True, null=True)
+    date = models.DateTimeField(auto_now_add=True)
     ordered = models.BooleanField(default=False)
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    delivery_address = models.CharField(max_length=255)
+
+    def __str__(self):
+        return str(self.id)
+
+
+class OrderItem(models.Model):
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, blank=True, null=True)
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank=True, null=True)
     quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return f"{self.quantity} of {self.item.name}"
 
 
-class Order(models.Model):
+
+class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, blank=True, null=True)
-    items = models.ManyToManyField(OrderItem)
-    name = models.CharField(max_length=255)
-    email = models.EmailField()
-    delivery_address = models.CharField(max_length=255)
-    ordered = models.BooleanField(default=False)
-    date = models.DateTimeField()
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank=True, null=True)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    post_code = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.name
+        return f"first line address of order no. {self.id} is {self.address}"
