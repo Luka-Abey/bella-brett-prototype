@@ -43,6 +43,18 @@ class Order(models.Model):
     email = models.EmailField()
     delivery_address = models.CharField(max_length=255)
 
+    @property
+    def get_cart_total(self):
+        orderitems = self.orderitem_set.all()
+        total_price = sum([item.get_individual_total for item in orderitems])
+        return total_price
+
+    @property
+    def get_cart_items(self):
+        orderitems = self.orderitem_set.all()
+        total_quantity = sum([item.quantity for item in in orderitems])
+        return total_quantity
+
     def __str__(self):
         return str(self.id)
 
@@ -53,7 +65,7 @@ class OrderItem(models.Model):
     quantity = models.IntegerField(default=1)
 
     @property
-    def get_total(self):
+    def get_individual_total(self):
         total = self.item.price * self.quantity
         return total
 
