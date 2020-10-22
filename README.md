@@ -13,7 +13,8 @@ This is a repo to document a clothing brand site I am developing.
 - [x] Responsive page
 - [x] Simple item upload, from Django admin
 - [x] Image upload as part of item, from Django admin
-- [x] Dynamically rendered HTML from DB information
+- [x] Dynamically rendered HTML home/products page
+- [x] Dynamically rendered HTML basket
 
 #### To Do:
 - [] Add to cart
