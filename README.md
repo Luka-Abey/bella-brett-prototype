@@ -1,5 +1,5 @@
 ### Welcome !
-This is a repo to document a clothing brand site I am developing. 
+This is a repo to document a clothing brand site I am developing.
 
 ### Aims:
 #### Completed:
@@ -20,5 +20,6 @@ This is a repo to document a clothing brand site I am developing.
 #### To Do:
 - [] Add to cart
 - [] Checkout
-- [] Payment
+- [] Payment - research and conclude - Stripe or Banked or summet else?
+- [] Order summary/success
 - [] Order confirmation
