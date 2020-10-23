@@ -11,8 +11,29 @@ for(var i = 0; i < updateBtns.length; i++){
       console.log("you are not logged in")
     }
     else {
-      console.log(user, "is logged in")
+      updateUserOrder(itemId, action)
     }
 
+  })
+}
+
+function updateUserOrder(itemId, action){
+  console.log('User is logged in, sending data...')
+
+  var url = '/update_item/'
+
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({'itemId': itemId, 
+    'action': action})
+  })
+  .then((response) =>{
+    return response.json()
+  })
+  .then((data) =>{
+    console.log('data', data)
   })
 }
