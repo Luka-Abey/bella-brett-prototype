@@ -7,6 +7,25 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel= "stylesheet" type = "text/css" href="{% static 'main.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script type="text/javascript">
+          var user = '{{request.user}}'
+          function getToken(name){
+            var cookieValue= null;
+            if(document.cookie && document.cookie !== '') {
+              var cookies = document.cookie.split(';');
+              for (var i = 0; i < cookies.length; i++){
+                var cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (
+                  name + '=')){
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                  }
+              }
+            }
+            return cookieValue;
+          }
+          var csrftoken = getToken('csrftoken');
+      </script>
         <title>Bella Brett: Checkout</title>
     </head>
 
