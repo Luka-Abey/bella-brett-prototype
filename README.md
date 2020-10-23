@@ -17,6 +17,7 @@ This is a repo to document a clothing brand site I am developing.
 - [x] Dynamically rendered HTML basket
 - [x] User functionality integrated
 - [x] Add to cart
+- [x] Update cart/quantity
  
 #### To Do:
 
