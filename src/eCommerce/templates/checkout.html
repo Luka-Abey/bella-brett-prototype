@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <html lang = "en">
@@ -8,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel= "stylesheet" type = "text/css" href="{% static 'main.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-        <title>Bella Brett: Your Basket</title>
+        <title>Bella Brett: Checkout</title>
     </head>
 
     {% block content %}
@@ -47,7 +46,7 @@
         <div>
             <section id="about" class = "page">            
                 
-                    <h2>YOUR BASKET</h2>
+                    <h2>ORDER SUMMARY</h2>
                     <h5>We've kept your items safe</h5>
             </section>
         </div>
@@ -80,22 +79,13 @@
                 {% endfor %}
                 <tr>
                     <td>
-                        <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
+                        <a class="button" href="/basket">&#x2190; Back to Basket</a>
                     </td>
                     <td>
                         Total Items: {{order.get_cart_item_quantity}}
                     </td>
                     <td>
                         <a>Total Price: £{{order.get_cart_total}}</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a href="/checkout/">
-                            <button>Checkout</button>
-                        </a>
                     </td>
                 </tr>
             </table>

@@ -30,7 +30,7 @@
                     <a href="#" class = "individual-link">Editorial</a>
                 </li>
                 <li>
-                    <!-- <img class = "basket" src="{% static '/media/cart.png' %}"> -->
+                    <img class = "basket" src="{% static '/media/cart.png' %}">
                     <a href="/basket/" class = "individual-link">Basket</a>
                 </li>
             </ul>
@@ -67,7 +67,7 @@
                         
                             <p class = "product-desc centerize">{{ item.description }}</p>
                             <img src="{{item.image.url}}" class = "products">
-                                <a href="{{ item.get_add_to_cart_url }}" class="centerize"><button method="POST">Add to basket</button></a>
+                                <a href="{{ item.get_add_to_cart_url }}" class="centerize"><button data-product="{{item.id}}" data-action="add">Add to basket</button></a>
                             
                             <p class = "centerize">{{item.name}}</p>
                             <p class ="centerize">£{{item.price}}</p>
@@ -89,6 +89,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <script type = "text/javascript" src = "{% static '/app.js' %}"></script>
-
+    <script type = "text/javascript" src = "{% static 'js/app.js' %}"></script>
+    <script type = "text/javascript" src = "{% static 'js/basket.js' %}"></script>
 </html>
