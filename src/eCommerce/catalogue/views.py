@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Item, Order, OrderItem
 from django.http import JsonResponse
+import json
 
 def checkout(request):
     if request.user.is_authenticated:
@@ -41,6 +42,10 @@ class HomeView(ListView):
 
 
 def updateItem(request):
+    data = json.loads(request.body)
+    itemId = data['itemId']
+    action = data['action']
+    print(action, itemId)
     return JsonResponse('Item was added', safe=False)
         
     
