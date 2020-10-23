@@ -70,6 +70,7 @@
                     
                         </div>
                     </td>
+                  
                     <td>
                        {{product.quantity}}
                     </td>
@@ -81,10 +82,10 @@
                         <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
                     </td>
                     <td>
-                        Item count: {{order.get_cart_item_quantity}}. Total:
+                        Total Items: {{order.get_cart_item_quantity}}
                     </td>
                     <td>
-                        <a>£{{order.get_cart_total}}</a>
+                        <a>Total Price: £{{order.get_cart_total}}</a>
                     </td>
                 </tr>
             </table>
