@@ -2,8 +2,17 @@ var updateBtns = document.getElementsByClassName('update-cart')
 
 for(var i = 0; i < updateBtns.length; i++){
   updateBtns[i].addEventListener('click', function(){
-    var itemId = this.dataset.item
+    var itemId = this.dataset.product
     var action = this.dataset.action
     console.log(itemId, action)
+
+    console.log(user)
+    if(user === 'AnonymousUser'){
+      console.log("you are not logged in")
+    }
+    else {
+      console.log(user, "is logged in")
+    }
+
   })
 }
