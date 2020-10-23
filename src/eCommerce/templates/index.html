@@ -30,7 +30,7 @@
                     <a href="#" class = "individual-link">Editorial</a>
                 </li>
                 <li>
-                    <img class = "basket" src="{% static '/media/cart.png' %}">
+                    <!-- <img class = "basket" src="{% static '/media/cart.png' %}"> -->
                     <a href="/basket/" class = "individual-link">Basket</a>
                 </li>
             </ul>
@@ -67,7 +67,11 @@
                         
                             <p class = "product-desc centerize">{{ item.description }}</p>
                             <img src="{{item.image.url}}" class = "products">
-                                <a href="{{ item.get_add_to_cart_url }}" class="centerize"><button data-product="{{item.id}}" data-action="add">Add to basket</button></a>
+                                <a class="centerize">
+                                    <button data-product="{{item.id}}" data-action="add" 
+                                    class="update-cart">Add to basket
+                                    </button>
+                                </a>
                             
                             <p class = "centerize">{{item.name}}</p>
                             <p class ="centerize">£{{item.price}}</p>
