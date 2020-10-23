@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <script type="text/javascript">
             var user = '{{request.user}}'
-            
+
             function getToken(name){
             var cookieValue= null;
             if(document.cookie && document.cookie !== '') {
@@ -95,6 +95,12 @@
                   
                     <td>
                        {{product.quantity}}
+                       <div class="quantity">
+                           <img data-product={{product.item.id}} data-action="add" 
+                           class="update-cart arrow " src="{% static 'media/arrow-up.png' %}">
+                           <img data-product={{product.item.id}} data-action="remove" 
+                           class="update-cart arrow " src="{% static 'media/arrow-down.png' %}">
+                       </div>
                     </td>
                     <td>£{{product.get_individual_total}}</td>
                 </tr>
@@ -133,5 +139,6 @@
 
     
     <script type = "text/javascript" src = "{% static 'js/app.js' %}"></script>
+    <script type = "text/javascript" src = "{% static 'js/basket.js' %}"></script>
 
 </html>

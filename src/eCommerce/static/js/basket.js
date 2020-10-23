@@ -18,7 +18,6 @@ for(var i = 0; i < updateBtns.length; i++){
 }
 
 function updateUserOrder(itemId, action){
-  console.log('User is logged in, sending data...')
 
   var url = '/update_item/'
 
@@ -34,8 +33,8 @@ function updateUserOrder(itemId, action){
   .then((response) =>{
     return response.json()
   })
-  
+
   .then((data) =>{
-    console.log('data', data)
+    location.reload()
   })
 }

@@ -265,6 +265,12 @@ button {
   cursor: pointer;
 }
 
+.arrow {
+  height: 10px;
+  width: auto;
+  cursor: pointer;
+}
+
 button::before, button::after {
   box-sizing: inherit;
   position: absolute;
