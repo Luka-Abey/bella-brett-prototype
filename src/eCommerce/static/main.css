@@ -271,6 +271,19 @@ button {
   cursor: pointer;
 }
 
+.checkout-row{
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  justify-content: center;
+}
+
+.col-50{
+  padding: 0 16px;
+  flex: 50%;
+}
+
 button::before, button::after {
   box-sizing: inherit;
   position: absolute;

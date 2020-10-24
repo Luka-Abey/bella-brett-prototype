@@ -107,7 +107,8 @@
                 {% endfor %}
                 <tr>
                     <td>
-                        <a class="button" href="/#nav-products">&#x2190; Keep shopping</a>
+                        <a class="button" href="/#nav-products">
+                            <button>&#x2190; Keep shopping</button></a>
                     </td>
                     <td>
                         Total Items: {{order.get_cart_item_quantity}}
@@ -116,7 +117,9 @@
                         <a>Total Price: £{{order.get_cart_total}}</a>
                     </td>
                 </tr>
+                <tr><td></td><td></td><td>------------</td></tr>
                 <tr>
+                    
                     <td></td>
                     <td></td>
                     <td>
