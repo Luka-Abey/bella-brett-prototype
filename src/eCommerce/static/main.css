@@ -104,11 +104,6 @@ nav{
   color: #999;
 }
 
-.nav__ul--extra {
-  column-count: 2;
-  column-gap: 1.25em;
-}
-
 .legal {
   display: flex;
   flex-wrap: wrap;
@@ -133,10 +128,6 @@ nav{
 @media screen and (min-width: 40.375em) {
   .footer__nav > * {
     flex: 1;
-  }
-  
-  .nav__item--extra {
-    flex-grow: 2;
   }
   
   .footer__addr {
