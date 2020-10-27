@@ -21,6 +21,7 @@ This is a repo to document a clothing brand site I am developing.
  
 #### To Do:
 
+- [] Deployment
 - [] Checkout
 - [] Payment - research and conclude - Stripe or Banked or summet else?
 - [] Order summary/success
