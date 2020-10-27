@@ -119,6 +119,10 @@ nav{
   color: #ffffeb;
 }
 
+.fa-github {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
     margin-left: auto;
