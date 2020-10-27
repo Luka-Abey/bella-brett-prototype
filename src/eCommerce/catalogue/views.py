@@ -66,4 +66,5 @@ def updateItem(request):
     return JsonResponse('Item was added', safe=False)
         
     
+    
 
