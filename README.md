@@ -28,7 +28,6 @@ This is a repo to document a clothing brand site I am developing.
 - [] Order confirmation
 - [] Guest users
 - [] Migrate database to PostgreSQL
-- [] 
 
 ### Run Locally:
 
@@ -56,8 +55,10 @@ This will get the server running, by default on port 8000. To access the admin p
 
 This is the 'behind the scenes' of the application, where you can add items and customers to the shop. 
 
-If you follow the items section in the admin panel, you can add new items to the store, and add images corresponding to these items as well. The images I have attached are optimised in scale for the site to look its best. 
+If you follow the items section in the admin panel, you can add new items to the store, and add images corresponding to these items as well. The site has been optimised for images of 500 x 700 pixels.
 
 To be able to add items to a cart you need to create a specific customer object, which can also be done in the admin panel. Once that is completed, this information will then be displayed on the home page product section, and can be added to cart.
 
 I’ve configured the .gitignore to ignore media, so some icons such as up/down arrows for quantity selection in the basket, and the home page image banner will not be visible to you.
+
+Thanks for looking, any tips/thoughts please PR/open issues away.
