@@ -26,3 +26,38 @@ This is a repo to document a clothing brand site I am developing.
 - [] Payment - research and conclude - Stripe or Banked or summet else?
 - [] Order summary/success
 - [] Order confirmation
+- [] Guest users
+- [] Migrate database to PostgreSQL
+- [] 
+
+### Run Locally:
+
+Create the directory you'd like to clone into, navigate to it, and open Git Bash. Run the following command:
+```
+git clone https://github.com/Luka-Abey/eCommerce.git
+```
+
+Once you have cloned the repo, navigate to eCommerce/src/eCommerce and here run the command:
+```
+winpty python manage.py createsuperuser
+```
+
+This runs you through an administrator setup, so that you can access the admin panel as well as the main site.
+Following this, run:
+```
+<python manage.py makemigrations>
+<python manage.py migrate>
+```
+And then:
+```
+<python manage.py runserver>
+```
+This will get the server running, by default on port 8000. To access the admin panel, add /admin to the URL. 
+
+This is the 'behind the scenes' of the application, where you can add items and customers to the shop. 
+
+If you follow the items section in the admin panel, you can add new items to the store, and add images corresponding to these items as well. The images I have attached are optimised in scale for the site to look its best. 
+
+To be able to add items to a cart you need to create a specific customer object, which can also be done in the admin panel. Once that is completed, this information will then be displayed on the home page product section, and can be added to cart.
+
+I’ve configured the .gitignore to ignore media, so some icons such as up/down arrows for quantity selection in the basket, and the home page image banner will not be visible to you.
