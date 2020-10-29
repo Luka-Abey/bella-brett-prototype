@@ -21,14 +21,14 @@ This is a repo to document a clothing brand site I am developing.
  
 #### To Do:
 
-- [] Migrate database to PostgreSQL
-- [] Sort issues around deployment
-- [] Deploy
-- [] Checkout
-- [] Payment - research and conclude - Stripe or Banked or summet else?
-- [] Order summary/success
-- [] Order confirmation
-- [] Guest users
+[] Migrate database to PostgreSQL
+[] Sort issues around deployment
+[] Deploy
+[] Checkout
+[] Payment - research and conclude - Stripe or Banked or summet else?
+[] Order summary/success
+[] Order confirmation
+[] Guest users
 
 
 
