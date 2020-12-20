@@ -2,11 +2,6 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth.models import User
 
-# SIZE_CHOICES = (
-#     ('S', 'Small'),
-#     ('M', 'Medium'),
-#     ('L', 'Large')
-# )
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
