@@ -14,54 +14,51 @@
             var user = '{{request.user}}'
 
             function getToken(name){
-            var cookieValue= null;
-            if(document.cookie && document.cookie !== '') {
-                var cookies = document.cookie.split(';');
-                for (var i = 0; i < cookies.length; i++){
-                var cookie = cookies[i].trim();
-                if (cookie.substring(0, name.length + 1) === (
-                    name + '=')){
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                    }
-                }
-            }
-            return cookieValue;
+              var cookieValue= null;
+              if(document.cookie && document.cookie !== '') {
+                  var cookies = document.cookie.split(';');
+                  for (var i = 0; i < cookies.length; i++){
+                  var cookie = cookies[i].trim();
+                  if (cookie.substring(0, name.length + 1) === (
+                      name + '=')){
+                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                      break;
+                      }
+                  }
+              }
+              return cookieValue;
             }
             var csrftoken = getToken('csrftoken');
         </script>
     </head>
-
+    
+    {% block content %}
     <body>
-
-        {% block content %}
-        
-        <nav>
-            <div class="logo individual-link">
-                <a href="#banner"><h4>Bella Brett</h4></a>
-            </div>
-            <ul class = "nav-links">
-                <li>
-                    <a href="#about" class = "individual-link">About</a>
-                </li>
-                <li>
-                    <a href="#nav-products" class = "individual-link">Products</a>
-                </li>
-                <li>
-                    <a href="#" class = "individual-link">Editorial</a>
-                </li>
-                <li>
-                    <!-- <img class = "basket" src="{% static '/media/cart.png' %}"> -->
-                    <a href="/basket/" class = "individual-link">Basket</a>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-
+      <nav>
+        <div class="logo individual-link">
+            <a href="/"><h4>Bella Brett</h4></a>
+        </div>
+        <ul class = "nav-links">
+            <li>
+                <a href="/#about" class = "individual-link">About</a>
+            </li>
+            <li>
+                <a href="/#nav-products" class = "individual-link">Products</a>
+            </li>
+            <li>
+                <a href="#" class = "individual-link">Editorial</a>
+            </li>
+            <li>
+                <!-- <img class = "basket" src="{% static '/media/cart.png' %}"> -->
+                <a href="/basket/" class = "individual-link">Basket</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+      </nav>
 
         <div>
             <section id="banner" class = "page">            
